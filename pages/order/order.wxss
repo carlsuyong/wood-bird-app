@@ -1,0 +1,153 @@
+.container {
+  height: 100%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  box-sizing: border-box;
+}
+
+/* 头部 */
+
+.header {
+  width: 100%;
+  height: 95rpx;
+  position: fixed;
+  top: 0;
+  background-color: #fefefe;
+  z-index: 100;
+}
+
+.headerTab {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.headerTab>text {
+  font-size: 32rpx;
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  color: #666;
+  padding: 24rpx 0;
+  box-sizing: border-box;
+}
+
+.activeClick {
+  color: #ff9180 !important;
+  border-bottom: 3px solid #ff9180;
+}
+
+/* 空 */
+
+.empty {
+  height: 95rpx;
+}
+
+/* 列表详情 */
+.order-content{
+  padding: 0 30rpx;
+}
+
+.box-list {
+  margin-top: 30rpx;
+  width: 100%;
+  height: 190rpx;
+  background: #fff;
+  box-shadow: 0 0 32px 0 rgba(216, 216, 216, 0.50);
+}
+
+.unfinished-box {
+  padding: 25rpx 50rpx 34rpx 39rpx;
+  overflow: hidden;
+}
+
+.fl-text {
+  float: left;
+  width: 500rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.box-text {
+  overflow: hidden;
+}
+
+.name {
+  max-width: 85rpx;
+  display: block;
+  overflow: hidden;
+  float: left;
+  font-size: 28rpx;
+  color: #333;
+  border-right: 1px solid #333;
+  padding-right: 15rpx;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title {
+  float: left;
+  font-size: 28rpx;
+  color: #333;
+  /* padding-left: 15rpx; */
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 500rpx;
+}
+
+.adress {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.date {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+
+.fr-image {
+  float: right;
+  width: 83rpx;
+  height: 83rpx;
+  margin-top: 35rpx;
+}
+
+.fixed-limg {
+  position: fixed;
+  bottom: 75rpx;
+  left: 32rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.fixed-limg image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.fixed-img {
+  position: fixed;
+  bottom: 80rpx;
+  right: 32rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.fixed-img image {
+  width: 120rpx;
+  height: 120rpx;
+}

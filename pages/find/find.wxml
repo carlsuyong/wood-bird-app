@@ -1,0 +1,22 @@
+<view class="container">
+  <view class='index-container' data-postId='5c4ae294f8b57b03121cefb5' catchtap='onClickDetail'>
+    <image class='bg-img' src='/img/searchbg.jpg'></image>
+    <view class='task-title'>武汉版中国合伙人打造温馨小窝</view>  
+  </view>
+  <view class='index-container'>
+    <image class='bg-img' src='/img/searchbg.jpg'></image>
+    <view class='task-title'>武汉版中国合伙人打造温馨小窝</view>  
+  </view>
+  <view class='index-container'>
+    <image class='bg-img' src='/img/searchbg.jpg'></image>
+    <view class='task-title'>武汉版中国合伙人打造温馨小窝</view>  
+  </view>
+  <view class='index-container'>
+    <image class='bg-img' src='/img/searchbg.jpg'></image>
+    <view class='task-title'>武汉版中国合伙人打造温馨小窝</view>  
+  </view>
+  <view class='index-container'>
+    <image class='bg-img' src='/img/searchbg.jpg'></image>
+    <view class='task-title'>武汉版中国合伙人打造温馨小窝</view>  
+  </view>
+</view>

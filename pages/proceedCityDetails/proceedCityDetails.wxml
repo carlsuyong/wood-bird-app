@@ -1,0 +1,50 @@
+<view class='container'>
+  <!-- 轮播图 -->
+  <swiper indicator-dots = 'true' autoplay = 'true'>
+    <block wx:for="{{imgUrls}}" wx:key='{{item}}' wx:index='{{index}}'  >
+     <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+    </block>
+  </swiper>
+  <!-- 地址名称 -->
+  <view class='adressName'>
+    <text class='procedTiltle'>六号线南锣鼓巷直达精装两房</text>
+    <view class='imgAvata'>
+      <image src='/img/beijing.png'></image>
+      <text class='procedname'>丢丢麻麻</text>
+      <text class='procedmana'>实名认证 个人房东</text>
+      <text class='procedbtn'>联系房东</text> 
+    </view>
+  </view>
+  <!-- 房屋信息 -->
+  <view class='housemessage'>
+    <view class=''>
+      <view>
+        <image src='/img/index1.png'></image>
+      </view>   
+      <view>
+        <text>整租</text>
+        <text>居民 2室1厅 房源面积90</text>
+      </view>
+    </view>
+    <view>
+      <view>
+        <image src='/img/index1.png'></image>
+      </view>   
+      <view>
+        <text>宜住4人</text>
+        <text>独享整套房源 2个卫生间</text>
+      </view>
+    </view>
+    <view>
+      <view>
+        <image src='/img/index1.png'></image>
+      </view>   
+      <view>
+        <text>共2张</text>
+        <text>双人床</text>
+      </view>
+    </view>
+  </view>
+</view>

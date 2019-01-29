@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/proceedCityDetails/proceedCityDetails",
+    "pages/coupon/coupon",
+    "pages/cityHouseDetails/cityHouseDetails",
+    "pages/search/search",
+    "pages/logs/logs",
+    "pages/find/find",
+    "pages/find/findDetail/findDetail",
+    "pages/order/order",
+    "pages/indexDetails/indexDetails"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#ff9180",
+    "borderStyle": "red",
+    "list": [
+      {
+        "selectedIconPath": "img/index1.png",
+        "iconPath": "img/index2.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "img/find1.png",
+        "iconPath": "img/find2.png",
+        "pagePath": "pages/find/find",
+        "text": "发现"
+      },
+      {
+        "selectedIconPath": "img/order1.png",
+        "iconPath": "img/order2.png",
+        "pagePath": "pages/order/order",
+        "text": "订单"
+      },{
+        "selectedIconPath": "img/coupon1.png",
+        "iconPath": "img/coupon2.png",
+        "pagePath": "pages/coupon/coupon",
+        "text": "优惠券"
+      }
+    ]
+  }
+}

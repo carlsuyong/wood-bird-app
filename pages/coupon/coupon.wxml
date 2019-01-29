@@ -1,0 +1,42 @@
+<view class='container'>
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo && canIUse}}" class='show-author shows'>
+      <!-- <button open-type="getUserInfo" class='show-author' bindgetuserinfo="getUserInfo">
+        <view class='get-userinfo'>登录</view>
+      </button> -->
+      <view class='show-author'>
+        <view class='get-userinfo shows'>
+          <input maxlength="11" bindinput='getPhone' placeholder='请输入手机号'></input>
+        </view>
+        <view class='get-userinfo'>
+          <input type='password' bindinput='getPassword' placeholder='请输入密码'></input>
+        </view>
+        <button open-type="getUserInfo" bindgetuserinfo='getLogin' class='loginbtn'>登录</button>
+        
+      </view>
+    </block>
+    <block wx:else>
+      <!-- 头部 -->
+      <view class='header'>
+        <view class='headerTab' data-type='1' catchtap='ontabClick'>
+          <text wx:if='{{activeClick==1}}' class='activeClick'>可使用</text>
+          <text wx:else>可使用</text>
+        </view>
+        <view class='headerTab' data-type='2' catchtap='ontabClick'>
+          <text wx:if='{{activeClick == 2}}' class='activeClick'>已过期</text>
+          <text wx:else>已过期</text>
+        </view>
+      </view>
+      <view class='empty'></view>
+      
+      <view class='coupon-content'>
+        <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">11</button> -->
+        <view class='box-list'>
+          <image src='/img/coupon2.png'></image>
+          <text>您目前还没有优惠券</text>
+        </view>
+
+      </view>
+    </block>
+  </view>
+</view>

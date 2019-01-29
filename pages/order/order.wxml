@@ -1,0 +1,57 @@
+<view class='container'>
+  <!-- 头部 -->
+  <view class='header'>
+    <view class='headerTab' data-type='1' catchtap='ontabClick'>
+      <text wx:if='{{activeClick==1}}' class='activeClick'>进行中</text>
+      <text wx:else>进行中</text>
+    </view>
+    <view class='headerTab' data-type='2' catchtap='ontabClick'>
+      <text wx:if='{{activeClick == 2}}' class='activeClick'>已结束</text>
+      <text wx:else>已结束</text>
+    </view>
+  </view>
+  <view class='empty'></view>
+  <!-- 内容 -->
+  <view class='order-content'>
+    <view class='box-list'>
+      <view class='unfinished-box'>
+        <view class='fl-text'>
+          <view class='box-text'>
+            <text class='title'>订单</text>
+          </view>
+          <text class='adress'>地址</text>
+          <text class='date'>2018-01-02 15:30</text>
+        </view>
+        <image class='fr-image' src='/img/index1.png'></image>
+      </view>
+    </view>
+
+    <view class='box-list'>
+      <view class='unfinished-box'>
+        <view class='fl-text'>
+          <view class='box-text'>
+            <text class='title'>订单</text>
+          </view>
+          <text class='adress'>地址</text>
+          <text class='date'>2018-01-02 15:30</text>
+        </view>
+        <image class='fr-image' src='/img/index1.png'></image>
+      </view>
+    </view>
+
+    <view class='box-list'>
+      <view class='unfinished-box'>
+        <view class='fl-text'>
+          <view class='box-text'>
+            <text class='title'>订单</text>
+          </view>
+          <text class='adress'>地址</text>
+          <text class='date'>2018-01-02 15:30</text>
+        </view>
+        <image class='fr-image' src='/img/index1.png'></image>
+      </view>
+    </view>
+
+  </view>
+
+</view>

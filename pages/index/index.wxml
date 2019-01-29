@@ -1,0 +1,269 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <!-- 背景图 -->
+  <view class='index-container'>
+    <!-- <image class='bg-img' src='{{banners}}'></image> -->
+    <image class='bg-img' src='/img/searchbg.jpg'></image>
+    <view class='index-search' catchtap='onClickSearch'>
+      <image class='search-img' src='/img/search.png'></image>
+      <span class='input' >搜索房源、输入城市或目的地</span>
+    </view>
+    <image class='label-img' src='/img/long_open.png'></image>
+  </view>
+  <!-- 396座城市 -->
+  <view class='index-396'>
+    <view class='index-label'>
+      <span class='index-title'>396座城市50万套民宿</span>
+      <image class='search-jian' src='/img/index_searchBtn.png'></image>
+    </view>
+    <!-- 轮播 -->
+    <swiper class='join-swiper' autoplay="{{false}}" next-margin='360rpx' duration="300">
+      <!-- <block wx:for='{{Project}}' wx:key='{{index}}'> -->
+      <swiper-item>
+        <image class='index-add-img' src='/img/beijing.png'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='index-add-img' src='/img/shanghai.jpg'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='index-add-img' src='/img/chengdu.png'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='index-add-img' src='/img/nanjing.jpg'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='index-add-img' src='/img/chongqing.png'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='index-add-img' src='/img/hangzhou.jpg'></image>
+      </swiper-item>
+      <!-- </block> -->
+    </swiper>
+    <!-- 标签 -->
+    <view class='index-font-label'>
+      <span class='index-font' catchtap='onClickDetail'>上海</span>
+      <span class='index-font'>北京</span>
+      <span class='index-font'>成都</span>
+      <span class='index-font'>重庆</span>
+      <span class='index-font'>三亚</span>
+      <span class='index-font'>广州</span>
+      <span class='index-font'>杭州</span>
+      <span class='index-font'>苏州</span>
+      <span class='index-font'>武汉</span>
+      <span class='index-font index-all'>全部</span>
+    </view>
+  </view>
+  <!-- 秋日私语 -->
+  <view class='index-396'>
+    <view class='index-label'>
+      <span class='index-title'>秋日私语</span>
+      <!-- <image class='search-jian' src='/img/index_searchBtn.png'></image> -->
+    </view>
+    <!-- 轮播 -->
+    <swiper class='join-swipers' autoplay="{{false}}" next-margin='290rpx' duration="300">
+      <!-- <block wx:for='{{Project}}' wx:key='{{index}}'> -->
+      <swiper-item>
+        <image class='index-add-img' src='/img/beijing.png'></image>
+        <view class='index-intor'>
+          <span class='index-top1'>TOP1 皇城根下品京味儿</span>
+          <span class='index-top2'>繁华三里屯 胡同豆汁儿冲</span>
+          <span class='index-top3'>关键字 #故宫 #四合院</span>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <image class='index-add-img' src='/img/chongqing.png'></image>
+        <view class='index-intor'>
+          <span class='index-top1'>TOP2 火辣的网红城市</span>
+          <span class='index-top2'>必看洪崖洞 必吃辣火锅</span>
+          <span class='index-top3'>关键字 #火锅 #洪崖洞</span>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <image class='index-add-img' src='/img/chengdu.png'></image>
+        <view class='index-intor'>
+          <span class='index-top1'>TOP3 宽窄巷子慢生活</span>
+          <span class='index-top2'>喝大碗茶 逛井巷子</span>
+          <span class='index-top3'>关键字 #锦里 #串串儿</span>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <image class='index-add-img' src='/img/shanghai.jpg'></image>
+        <view class='index-intor'>
+          <span class='index-top1'>TOP4 繁华魔都超体验</span>
+          <span class='index-top2'>黄浦江的风 外滩边的霓虹</span>
+          <span class='index-top3'>关键字 #迪士尼 #东方明珠</span>
+        </view>
+      </swiper-item>
+      <!-- </block> -->
+    </swiper>
+  </view>
+  <!-- 独有千秋 -->
+  <view class='index-396'>
+    <view class='index-label'>
+      <span class='index-title'>独有千秋</span>
+      <!-- <image class='search-jian' src='/img/index_searchBtn.png'></image> -->
+    </view>
+    <!-- 轮播 -->
+    <swiper class='join-swipers' autoplay="{{false}}" next-margin='100rpx' duration="300">
+      <!-- <block wx:for='{{Project}}' wx:key='{{index}}'> -->
+      <swiper-item class='index-width'>
+        <image class='index-bigimg' src='/img/beijing.png'></image>
+        <view class='index-smallimg'>
+          <image class='index-add-img1' src='/img/beijing.png'></image>
+          <image class='index-add-img2' src='/img/beijing.png'></image>
+        </view>
+      </swiper-item>
+      <swiper-item class='index-width'>
+        <image class='index-bigimg' src='/img/beijing.png'></image>
+        <view class='index-smallimg'>
+          <image class='index-add-img1' src='/img/beijing.png'></image>
+          <image class='index-add-img2' src='/img/beijing.png'></image>
+        </view>
+      </swiper-item>
+      <swiper-item class='index-width'>
+        <image class='index-bigimg' src='/img/beijing.png'></image>
+        <view class='index-smallimg'>
+          <image class='index-add-img1' src='/img/beijing.png'></image>
+          <image class='index-add-img2' src='/img/beijing.png'></image>
+        </view>
+      </swiper-item>
+      <swiper-item class='index-width'>
+        <image class='index-bigimg' src='/img/beijing.png'></image>
+        <view class='index-smallimg'>
+          <image class='index-add-img1' src='/img/beijing.png'></image>
+          <image class='index-add-img2' src='/img/beijing.png'></image>
+        </view>
+      </swiper-item>
+      <!-- </block> -->
+    </swiper>
+  </view>
+  <!-- 数据 -->
+  <view class='index-data'>
+    <view class='index-data-list'>
+      <image class='index-icon' src='/img/search.png'></image>
+      <view class='index-list'>
+        <span class='index-num'>7,682,408</span>
+        <span class='index-text'>6年以来已为760多万房客找到满意的房间</span>
+      </view>
+    </view>
+    <view class='index-data-list'>
+      <image class='index-icon' src='/img/search.png'></image>
+      <view class='index-list'>
+        <span class='index-num'>10,136,600</span>
+        <span class='index-text'>1013张真实房源照片，实拍验真安心入住</span>
+      </view>
+    </view>
+    <view class='index-data-list'>
+      <image class='index-icon' src='/img/search.png'></image>
+      <view class='index-list'>
+        <span class='index-num'>5,603,110</span>
+        <span class='index-text'>560万条评价</span>
+      </view>
+    </view>
+  </view>
+  <!-- 特价房源 -->
+  <view class='index-396'>
+    <view class='index-label'>
+      <span class='index-title'>特价房源</span>
+      <!-- <image class='search-jian' src='/img/index_searchBtn.png'></image> -->
+    </view>
+    <!-- 轮播 -->
+    <swiper class='join-swiper exjoin-swipers' autoplay="{{false}}" next-margin='510rpx' duration="100">
+      <!-- <block wx:for='{{Project}}' wx:key='{{index}}'> -->
+      <swiper-item class='label-box'>
+        <view class='index-add-label active-label'># 北京</view>
+      </swiper-item>
+      <swiper-item class='label-box'>
+        <view class='index-add-label'># 上海</view>
+      </swiper-item>
+      <swiper-item class='label-box'>
+        <view class='index-add-label'># 重庆</view>
+      </swiper-item>
+      <swiper-item class='label-box'>
+        <view class='index-add-label'># 杭州</view>
+      </swiper-item>
+      <swiper-item class='label-box'>
+        <view class='index-add-label'># 成都</view>
+      </swiper-item>
+      <swiper-item class='label-box'>
+        <view class='index-add-label'># 苏州</view>
+      </swiper-item>
+      <swiper-item class='label-box'>
+        <view class='index-add-label'># 广州</view>
+      </swiper-item>
+      <swiper-item class='label-box'>
+        <view class='index-add-label'># 深圳</view>
+      </swiper-item>
+      <!-- </block> -->
+    </swiper>
+     <!-- 特价房源轮播 -->
+      <swiper class='join-swipers ex-swipers' autoplay="{{false}}" next-margin='290rpx' duration="300">
+        <swiper-item>
+          <image class='index-add-img' src='/img/beijing.png'></image>
+          <view class='index-intor'>
+            <span class='index-top1'>TOP1 皇城根下品京味儿</span>
+            <span class='index-top2 fl'>￥199/晚</span>
+            <span class='index-top3 fr'>宜住2人</span>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <image class='index-add-img' src='/img/chongqing.png'></image>
+          <view class='index-intor'>
+            <span class='index-top1'>TOP2 火辣的网红城市</span>
+            <span class='index-top2 fl'>￥199/晚</span>
+            <span class='index-top3 fr'>宜住2人</span>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <image class='index-add-img' src='/img/chengdu.png'></image>
+          <view class='index-intor'>
+            <span class='index-top1'>TOP3 宽窄巷子慢生活</span>
+            <span class='index-top2 fl'>￥199/晚</span>
+            <span class='index-top3 fr'>宜住2人</span>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <image class='index-add-img' src='/img/shanghai.jpg'></image>
+          <view class='index-intor'>
+            <span class='index-top1'>TOP4 繁华魔都超体验</span>
+            <span class='index-top2 fl'>￥199/晚</span>
+            <span class='index-top3 fr'>宜住2人</span>
+          </view>
+        </swiper-item>
+      </swiper>
+  </view>
+   <!-- 信赖数据 -->
+  <view class='index-data'>
+    <view class='index-data-list'>
+      <!-- <image class='index-icon' src='/img/search.png'></image> -->
+      <view class='index-list'>
+        <span class='index-num'>安全可信赖</span>
+        <span class='index-text'>身份证验证，联网核查每一位房东，入住无忧</span>
+      </view>
+    </view>
+    <view class='index-data-list'>
+      <!-- <image class='index-icon' src='/img/search.png'></image> -->
+      <view class='index-list'>
+        <span class='index-num'>卫生整洁</span>
+        <span class='index-text'>酒店级保洁床单被罩每客一换卫生舒适</span>
+      </view>
+    </view>
+    <view class='index-data-list'>
+      <!-- <image class='index-icon' src='/img/search.png'></image> -->
+      <view class='index-list'>
+        <span class='index-num'>房屋保真</span>
+        <span class='index-text'>房产资质证明已上传平台审核备案</span>
+      </view>
+    </view>
+  </view>
+</view>

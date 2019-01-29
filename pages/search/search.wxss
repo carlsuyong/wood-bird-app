@@ -1,0 +1,95 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  margin: 0;
+  padding: 30rpx;
+  height: 100%;
+  border-top: 1px solid #e6e6e6;
+}
+/* 搜索 */
+
+.index-search {
+  width: 100%;
+  left: 45rpx;
+  background-color: #f3f3f3;
+  height: 70rpx;
+}
+
+.search-img {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 45rpx;
+}
+
+.index-search>input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 60rpx;
+  font-size: 28rpx;
+  color: #bbb;
+  padding-right: 75rpx;
+}
+
+.label-img {
+  position: absolute;
+  width: 360rpx;
+  height: 130rpx;
+  top: 395rpx;
+  left: 80rpx;
+}
+/* 热门城市 */
+.hot-city{
+  margin-top: 20rpx;
+}
+.cancle{
+  position: absolute;
+  right: 40rpx;
+  top: 47rpx;
+  font-size: 28rpx;
+  color: #555;
+}
+
+.hot-title{
+  color: #ff9180;
+  font-size: 34rpx;
+}
+.hot-city-box>text{
+  display: block;
+  width: 25%;
+  float: left;
+  text-align: center;
+  margin: 10rpx 0;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.hot-AZ{
+  display: block;
+  height:auto;
+  width: 100%;
+}
+.hot-titles{
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 100%;
+  background-color: #f3f3f3;
+  padding-left: 10rpx;
+}
+.span-la{
+  font-size: 30rpx;
+  display: block;
+  margin: 10rpx 0;
+  margin-left: 20rpx;
+}

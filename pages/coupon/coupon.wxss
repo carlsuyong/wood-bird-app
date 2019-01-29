@@ -1,0 +1,106 @@
+.container {
+  height: 100%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  box-sizing: border-box;
+}
+
+/* 头部 */
+
+.header {
+  width: 100%;
+  height: 95rpx;
+  position: fixed;
+  top: 0;
+  background-color: #fefefe;
+  z-index: 100;
+}
+
+.headerTab {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.headerTab>text {
+  font-size: 32rpx;
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  color: #666;
+  padding: 24rpx 0;
+  box-sizing: border-box;
+}
+
+.activeClick {
+  color: #ff9180 !important;
+  border-bottom: 3px solid #ff9180;
+}
+
+/* 空 */
+
+.empty {
+  height: 95rpx;
+}
+
+/* 列表详情 */
+
+.coupon-content {
+  padding: 0 30rpx;
+}
+
+.box-list {
+  width: 100%;
+}
+
+.box-list image {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.box-list text {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #bbb;
+}
+
+/* 登录 */
+.show-author>.get-userinfo.shows{
+  margin-top: 258rpx;
+}
+.show-author {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: white;
+  opacity: 0.8;
+}
+
+.show-author>.get-userinfo {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #bbb;
+  border-radius: 10rpx;
+  top: 50%;
+  padding: 0 30rpx;
+  height: 80rpx;
+  margin-top: 30rpx;
+}
+.show-author>.get-userinfo>input{
+  height: 100%;
+  font-size: 30rpx;
+}
+
+.loginbtn{
+  background-color: #ff9180;
+  color: white;
+  width: 50%;
+  margin-top: 50rpx;
+}

@@ -1,0 +1,55 @@
+swiper-item{
+  width: 100%;
+}
+swiper-item>image{
+  width:100%;
+}
+/* 内容 */
+.adressName{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.procedTiltle{
+  display: block;
+  color: rgb(91, 95, 96);
+  font-weight: bold;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid rgba(91, 95, 96,0.5);
+}
+
+.imgAvata{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.imgAvata image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.procedname{
+  color: rgb(91, 95, 96);
+  font-weight: bold;
+  font-size: 35rpx;
+  letter-spacing: 1rpx;
+  margin-top: 10rpx;
+}
+.procedmana{
+  font-size: 30rpx;
+  letter-spacing: 1rpx;
+  margin-top: 10rpx;
+}
+.procedbtn{
+  letter-spacing: 1rpx;
+  display: block;
+  height: 60rpx;
+  width: 200rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border: 1px solid #ff9180;
+  color: #ff9180;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}

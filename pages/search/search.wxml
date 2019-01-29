@@ -1,0 +1,141 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <view class='index-search' catchtap='onClickSearch'>
+    <image class='search-img' src='/img/search.png'></image>
+    <input placeholder='请输入目的地名称'></input>
+    <span catchtap='onCancleSearch' class='cancle'>取消</span>
+  </view>
+  <!-- 热门城市 -->
+  <view class='hot-city'>
+    <text class='hot-title'>热门城市</text>
+    <view class='hot-city-box'>
+      <text wx:for='{{city.hotcity}}' wx:key='{{index}}'>{{item.name}}</text>
+      <!-- <text>上海</text>
+      <text>哈尔滨</text>
+      <text>青岛</text>
+      <text>厦门</text>
+      <text>成都</text>
+      <text>杭州</text>
+      <text>东莞</text>
+      <text>重庆</text>
+      <text>广州</text>
+      <text>南京</text>
+      <text>宁波</text>
+      <text>三亚</text>
+      <text>深圳</text>
+      <text>合肥</text>
+      <text>武汉</text>
+      <text>珠海</text>
+      <text>苏州</text>
+      <text>天津</text>
+      <text>长沙</text> -->
+    </view>
+  </view>
+  <!-- A-Z -->
+  <view class='hot-AZ'>
+    <view>
+      <text class='hot-titles'>A</text>
+      <text class='span-la' wx:for='{{city.A}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>B</text>
+      <text class='span-la' wx:for='{{city.B}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>C</text>
+      <text class='span-la' wx:for='{{city.C}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>D</text>
+      <text class='span-la' wx:for='{{city.D}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>E</text>
+      <text class='span-la' wx:for='{{city.E}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>F</text>
+      <text class='span-la' wx:for='{{city.F}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>G</text>
+      <text class='span-la' wx:for='{{city.G}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>H</text>
+      <text class='span-la' wx:for='{{city.H}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>I</text>
+      <text class='span-la' wx:for='{{city.I}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>J</text>
+      <text class='span-la' wx:for='{{city.J}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>K</text>
+      <text class='span-la' wx:for='{{city.K}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>L</text>
+      <text class='span-la' wx:for='{{city.L}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>M</text>
+      <text class='span-la' wx:for='{{city.M}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>N</text>
+      <text class='span-la' wx:for='{{city.N}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>O</text>
+      <text class='span-la' wx:for='{{city.O}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>P</text>
+      <text class='span-la' wx:for='{{city.P}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>Q</text>
+      <text class='span-la' wx:for='{{city.Q}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>R</text>
+      <text class='span-la' wx:for='{{city.R}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>S</text>
+      <text class='span-la' wx:for='{{city.S}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>T</text>
+      <text class='span-la' wx:for='{{city.T}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>U</text>
+      <text class='span-la' wx:for='{{city.U}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>V</text>
+      <text class='span-la' wx:for='{{city.V}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>W</text>
+      <text class='span-la' wx:for='{{city.W}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>X</text>
+      <text class='span-la' wx:for='{{city.X}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>Y</text>
+      <text class='span-la' wx:for='{{city.Y}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+    <view>
+      <text class='hot-titles'>Z</text>
+      <text class='span-la' wx:for='{{city.Z}}' wx:key='{{index}}'>{{item.name}}</text>
+    </view>
+  </view>
+</view>
