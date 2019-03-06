@@ -8,7 +8,7 @@ Page({
   data: {
     activeClick: 1,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    userInfo: {},
+    userInfo: '',
     hasUserInfo: false,
   },
 
@@ -17,6 +17,10 @@ Page({
    */
   onLoad: function(options) {
     const _this = this
+    _this.setData({
+      userInfo: wx.getStorageSync('userInfo')
+    })
+    console.log(_this.data.userInfo)
     //获取信息
     // wx.getUserInfo({
     //   success(res) {
@@ -198,8 +202,12 @@ Page({
                 console.log(res)
                 wx.getUserInfo({
                   success: res => {
+                    
                     const userInfo = res.userInfo
                     wx.setStorageSync('userInfo', userInfo)
+                    _this.setData({   
+                      userInfo: userInfo
+                    })
                     let pass = utilMd5.hexMD5(password) 
                     let passwords = utilMd5.hexMD5(phone+pass)
                     console.log(result.code, phone, passwords, userInfo.nickName)

@@ -1,6 +1,6 @@
 <view class='container'>
   <view class="userinfo">
-    <block wx:if="{{!hasUserInfo && canIUse}}" class='show-author shows'>
+    <block wx:if="{{userInfo==''}}" class='show-author shows'>
       <!-- <button open-type="getUserInfo" class='show-author' bindgetuserinfo="getUserInfo">
         <view class='get-userinfo'>登录</view>
       </button> -->

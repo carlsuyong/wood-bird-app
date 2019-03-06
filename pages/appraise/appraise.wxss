@@ -1,0 +1,42 @@
+
+.container{
+  padding: 15rpx;
+}
+.leftTitle{
+  /* height: 120rpx;
+  line-height: 120rpx; */
+  overflow: hidden;
+  padding: 20rpx 0 20rpx 0;
+  border-bottom: 1px solid gray;
+}
+.leftTitle>image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  float:left;
+}
+.name{
+  display: block;
+  line-height:100rpx; 
+  font-size: 32rpx;
+}
+
+.downTitle{
+  float: left;
+  width: 80%;
+  box-sizing: border-box;
+  padding: 0 25rpx;
+}
+.custom{
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+}
+.landlord{
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  background-color:rgb(240,240,240); 
+}

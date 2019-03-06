@@ -1,50 +1,146 @@
 <view class='container'>
   <!-- 轮播图 -->
-  <swiper indicator-dots = 'true' autoplay = 'true'>
-    <block wx:for="{{imgUrls}}" wx:key='{{item}}' wx:index='{{index}}'  >
-     <swiper-item>
+  <swiper indicator-dots='true' autoplay='true'>
+    <block wx:for="{{imgUrls}}" wx:key='{{item}}' wx:index='{{index}}'>
+      <swiper-item>
         <image src="{{item}}" class="slide-image" />
-    </swiper-item>
+      </swiper-item>
     </block>
   </swiper>
   <!-- 地址名称 -->
   <view class='adressName'>
-    <text class='procedTiltle'>六号线南锣鼓巷直达精装两房</text>
+    <text class='procedTiltle'>{{houseDetail.name}}</text>
     <view class='imgAvata'>
       <image src='/img/beijing.png'></image>
       <text class='procedname'>丢丢麻麻</text>
       <text class='procedmana'>实名认证 个人房东</text>
-      <text class='procedbtn'>联系房东</text> 
+      <text class='procedbtn'>联系房东</text>
     </view>
   </view>
   <!-- 房屋信息 -->
   <view class='housemessage'>
-    <view class=''>
-      <view>
+    <view class='houses'>
+      <view class='houseImg'>
         <image src='/img/index1.png'></image>
-      </view>   
-      <view>
-        <text>整租</text>
-        <text>居民 2室1厅 房源面积90</text>
+      </view>
+      <view class='houseText'>
+        <text class='houseText1' wx:if='{{houseDetail.lease==0}}'>整租</text>
+        <text class='houseText1' wx:if='{{houseDetail.lease==1}}'>合租</text>
+        <view class='houseText2'>
+          <text class='' wx:if='{{houseDetail.buildType==0}}'>公寓</text>
+          <text class='' wx:if='{{houseDetail.buildType==1}}'>居民</text>
+          <text class='' wx:if='{{houseDetail.buildType==2}}'>客栈</text>
+          <text class='' wx:if='{{houseDetail.houseType==0}}'>一室</text>
+          <text class='' wx:if='{{houseDetail.houseType==1}}'>两室</text>
+          <text class='' wx:if='{{houseDetail.houseType==2}}'>三室</text>
+          <text class='' wx:if='{{houseDetail.houseType==3}}'>四室以上</text>
+          <text class=''>房源面积{{houseDetail.area}}㎡</text>
+        </view>
       </view>
     </view>
-    <view>
-      <view>
+    <view class='houses'>
+      <view class='houseImg'>
         <image src='/img/index1.png'></image>
-      </view>   
-      <view>
-        <text>宜住4人</text>
-        <text>独享整套房源 2个卫生间</text>
+      </view>
+      <view class='houseText'>
+        <text class='houseText1'>宜住{{houseDetail.peoples}}人</text>
+        <view class='houseText2'>
+          <text class='' wx:if='{{houseDetail.toilet==0}}'>独立卫生间</text>
+          <text class='' wx:if='{{houseDetail.toilet==1}}'>公共卫生间</text>
+        </view>
+        
       </view>
     </view>
-    <view>
-      <view>
+    <view class='houses'>
+      <view class='houseImg'>
         <image src='/img/index1.png'></image>
-      </view>   
-      <view>
-        <text>共2张</text>
-        <text>双人床</text>
+      </view>
+      <view class='houseText'>
+        <text class='houseText1'>床型</text>
+        <text class='houseText2' wx:if='{{houseDetail.bedType==0}}'>单人床</text>
+        <text class='houseText2' wx:if='{{houseDetail.bedType==1}}'>双人床</text>
+        <text class='houseText2' wx:if='{{houseDetail.bedType==2}}'>其他</text>
       </view>
     </view>
   </view>
+  <!-- 房屋描述 -->
+  <view class='houseDetail'>
+    <text class='houseTitle'>房屋描述</text>
+    <text class='houseDetails'>{{houseDetail.details.describe}}</text>
+  </view>
+  <!-- 评价 -->
+  <view class='houseDetail'>
+    <text class='houseTitles'>评价 {{houseDetail.evaluate}}</text>
+    <text class='houseTitleFloat' catchtap='appAppraise'>全部评价</text>
+  </view>
+  <!-- 配套设施 -->
+  <view class='houseDetail'>
+    <text class='houseTitles'>配套设施</text>
+    <view class='houseWifi'>
+      <text>宽带上网</text>
+      <text>无线WIFI</text>
+      <text>电视</text>
+      <text>淋雨</text>
+      <text>空调</text>
+      <text>暖气</text>
+      <text>被子</text>
+    </view>
+  </view>
+  <!-- 入住须知 -->
+  <view class='houseDetail'>
+    <text class='houseTitles'>入住须知</text>
+    <view class='houseKnows'>
+      <view class='houseKnow'>
+        <text>当天 15:00</text>
+        <text>最早入住时间</text>
+      </view>
+      <view class='houseKnow'>
+        <text>当天 12:00</text>
+        <text>最晚退房时间</text>
+      </view>
+      <view class='houseKnow'>
+        <text>1天</text>
+        <text>最少入住天数</text>
+      </view>
+    </view>
+    <view class='knowGle'>
+      <text class='knowText1'>房间编号</text>
+      <text class='knowText2'>293013</text>
+    </view>
+    <view class='knowGle'>
+      <text class='knowText1'>身份证</text>
+      <text class='knowText2'>需要</text>
+    </view>
+    <view class='knowGle'> 
+      <text class='knowText1'>线下押金</text>
+      <text class='knowText2'>需要</text>
+    </view>
+    <view class='knowGle'>
+      <text class='knowText1'>房东要求</text>
+      <text class='knowText2'>无</text>
+    </view>
+  </view>
+  <!-- 交易规则 -->
+  <view class='houseDetail'>
+    <text class='houseTitle'>交易规则-提前七天可全额退</text>
+    <text class='houseDetails'>
+      入住前七天12:00之前，如申请退款，订金全额退。
+    </text>
+    <text class='houseDetails'>
+      入住前七天12:00之后至入住当天12:00之前，如申请退款，扣除50%订金。
+    </text>
+    <text class='houseDetails'>
+      入住后如提前退房,扣除已入住天数房款总额,再扣除未入住天数房款总额的50%。
+    </text>
+    <text class='houseDetails'>
+      中午12:00之后默认当天已经入住,申请退款和提前退款时间以短租系统记录时间为准。
+    </text>
+  </view>
+
+</view>
+
+
+<!-- 立即预定 -->
+<view class='yuding' catchtap='onSchedule'>
+  立即预定
 </view>

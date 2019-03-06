@@ -1,0 +1,63 @@
+<view class='pricefilter'>
+  <!-- 滑动 -->
+  <view class=''>
+    <text class='price'>价格筛选</text>
+    <view class='sliderHCon'>
+      <view class='showMoney'>
+        <text class='MoneyValue'>￥{{leftValue}}</text>
+        <text class='MoneyValue'>￥{{rightValue}}</text>
+      </view>
+      <view class='twoSlider'>
+        <slider min='{{leftMin}}' max='{{leftMax}}' value='{{leftValue}}' activeColor='#cecacb' backgroundColor='#f26a36' block-size='20' step='100' style='width:{{leftWidth}}%;margin-right:0rpx;' bindchange="leftChange" />
+        <slider min='{{rightMin}}' max='{{rightMax}}' value='{{rightValue}}' activeColor='#f26a36' backgroundColor='#cecacb' block-size='20' step='100' style='width:{{rightWidth}}%;margin-left:0rpx;' bindchange="rightChange" />
+      </view>
+    </view>
+  </view>
+  <!-- 入住人数  -->
+  <view class='over'>
+    <text class='price'>入住人数</text>
+    <view class='checkinNum'>
+      <picker class='tabs' bindchange="bindChange" value="{{index}}" range="{{numArray}}">
+        <text class='check'>{{checkinNum}}人入住</text>
+        <text class='select'>选择人数</text>
+      </picker>
+    </view>
+  </view>
+  <!-- 出租 -->
+  <view class='over'>
+    <text class='price'>出租类型</text>
+    <checkbox-group class="group" bindchange="checkboxChange">
+      <view class="label-1" wx:for="{{lendType}}" wx:key='index'>
+        <label>
+          <checkbox value="{{item.name}}" checked="{{item.ischeck}}"></checkbox>
+          <text class="label-1__text">{{item.name}}</text>
+        </label>
+      </view>
+    </checkbox-group>
+  </view>
+  <view class='over'>
+    <text class='price'>房间床型</text>
+    <checkbox-group class="group" bindchange="checkboxChange">
+      <view class="label-1" wx:for="{{bedType}}" wx:key='index'>
+        <label>
+          <checkbox value="{{item.name}}" checked="{{item.ischeck}}"></checkbox>
+          <text class="label-1__text">{{item.name}}</text>
+        </label>
+      </view>
+    </checkbox-group>
+  </view>
+  <view class='over'>
+    <text class='price'>户型</text>
+    <checkbox-group class="group" bindchange="checkboxChange">
+      <view class="label-1" wx:for="{{roomType}}" wx:key='index'>
+        <label>
+          <checkbox value="{{item.name}}" checked="{{item.ischeck}}"></checkbox>
+          <text class="label-1__text">{{item.name}}</text>
+        </label>
+      </view>
+    </checkbox-group>
+  </view>
+  <view class='btn'>
+    确定
+  </view>
+</view>

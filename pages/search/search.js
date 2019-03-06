@@ -10,6 +10,35 @@ Page({
   },
   onLoad: function (options) {
     // 生命周期函数--监听页面加载
+    this.onSearch()
+    this.searchDestination()
+  },
+  //搜索目的地
+  searchDestination:function(){
+    wx.request({
+      url: 'https://aileer.net/resource/search',
+      method: 'POST',
+      data: {
+        name: '上海'
+      },
+      success: function (res) {
+        console.log(res)
+      }
+    })
+  },
+  //地址数据
+  onSearch:function(){
+    wx.request({
+      url: 'https://aileer.net/getCityList',
+      method:'GET',
+      data:{
+        pageSize:1,
+        pageNo:1
+      },
+      success:function(res){
+        console.log(res)
+      }
+    })
   },
   onReady: function () {
     // 生命周期函数--监听页面初次渲染完成
@@ -27,6 +56,13 @@ Page({
       }
     })
   },
+  // // 取消
+  // onCancleSearch:function (){
+  //   console.log('1111')
+  //   wx.navigateTo({
+  //     url: '../index/index'
+  //   })
+  // },
   onShow: function () {
     // 生命周期函数--监听页面显示
   },

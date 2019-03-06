@@ -1,0 +1,87 @@
+.container{
+  padding: 15rpx;
+}
+.bgTitle{
+  
+}
+.bgDate{
+  overflow: hidden;
+  padding: 20rpx 0;
+  border-bottom: 1px solid gray;
+}
+.bgDate text{
+  display: block;
+  font-size: 28rpx;
+}
+.beginTime{
+  text-align: center;
+  float: left;
+  width: 45%;
+}
+.endTime{
+  width: 45%;
+  float: left;
+  text-align: center;
+}
+.timeLine{
+  width: 10%;
+  text-align: center;
+  float: left;
+  margin-top: 10px;
+}
+
+.taoNumber{
+  padding: 15rpx 0;
+  border-bottom: 1px solid gray;
+}
+.numName{
+  font-size: 26rpx;
+  color: rgb(202, 195, 195);
+  margin: 10rpx 0;
+}
+.name1{
+  font-size: 32rpx;
+}
+.name2{
+  font-size: 26rpx;
+  color: rgb(202, 195, 195);
+  margin-left: 15rpx;
+}
+
+.names{
+  overflow: hidden;
+  margin: 15rpx 0;
+}
+.names1{
+  font-size: 32rpx;
+  float: left;
+}
+.names2{
+  float: right;
+  font-size: 30rpx;
+  width: 220rpx;
+}
+
+.yuding{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.money{
+  width: 70%;
+  float: left;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+.accea{
+  width: 30%;
+  float: left;
+  background-color: #ff9180;
+  color: white;
+  text-align: center;
+}

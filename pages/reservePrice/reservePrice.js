@@ -4,58 +4,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-    houseId:'',
-    houseDetail:{},
-    imgUrls: [
-      '/img/dian1.jpg',
-      '/img/dian2.jpg',
-      '/img/dian3.jpg'
-    ],
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.id)
-    const _this = this
-    _this.setData({
-      houseId: options.id
-    })
-    this.onDetails()
+    
   },
-  //获取房屋详情
-  onDetails:function(){
+  //预定
+  onyuding:function(){
     const _this = this
     wx.request({
-      url: 'https://aileer.net/resource/houseDetail',
-      method: 'GET',
+      url: 'https://aileer.net/order/generateOrder',
+      method: 'POST',
       data: {
-        houseId: this.data.houseId
+        houseId: '5c7e1d2b1ba3525002111d7c', // 房源Id must
+        userId: '5c500d5dbdba7720f428ec83', // 用户Id must
+        beginTime: '1551768742967', // 入住日期 must
+        endTime: '1551941542967', // 离开日期 must
+        name: '苏先生', // 房客姓名 option
+        phone: '18621390339', // 手机号 must
+        totalPrice: '685', // 总价 must
       },
       success: function (res) {
-        console.log(res.data.data)
-        _this.setData({
-          houseDetail:res.data.data
-        })
+        console.log(res)
       }
     })
-    
-  },
-  // 评价
-  appAppraise:function() {
-    wx.navigateTo({
-      url: '../appraise/appraise',
+    wx.showToast({
+      title: '预订成功',
+      icon: 'success',
+      duration: 2000
     })
+    _this.check()
   },
-  // 预定
-  onSchedule:function(){
-    
-    wx.navigateTo({
-      url: '../reservePrice/reservePrice',
-    })
+  check:function(){
+    setTimeout(function () {
+      wx.switchTab({
+        url: '../order/order',
+      })
+    }, 2000) 
   },
-    /**
+  /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {

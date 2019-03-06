@@ -30,37 +30,37 @@
     <swiper class='join-swiper' autoplay="{{false}}" next-margin='360rpx' duration="300">
       <!-- <block wx:for='{{Project}}' wx:key='{{index}}'> -->
       <swiper-item>
-        <image class='index-add-img' src='/img/beijing.png'></image>
+        <image class='index-add-img' catchtap='onClickDetail' src='/img/beijing.png'></image>
       </swiper-item>
       <swiper-item>
-        <image class='index-add-img' src='/img/shanghai.jpg'></image>
+        <image class='index-add-img' catchtap='onClickDetail' src='/img/shanghai.jpg'></image>
       </swiper-item>
       <swiper-item>
-        <image class='index-add-img' src='/img/chengdu.png'></image>
+        <image class='index-add-img' catchtap='onClickDetail' src='/img/chengdu.png'></image>
       </swiper-item>
       <swiper-item>
-        <image class='index-add-img' src='/img/nanjing.jpg'></image>
+        <image class='index-add-img' catchtap='onClickDetail' src='/img/nanjing.jpg'></image>
       </swiper-item>
       <swiper-item>
-        <image class='index-add-img' src='/img/chongqing.png'></image>
+        <image class='index-add-img' catchtap='onClickDetail' src='/img/chongqing.png'></image>
       </swiper-item>
       <swiper-item>
-        <image class='index-add-img' src='/img/hangzhou.jpg'></image>
+        <image class='index-add-img' catchtap='onClickDetail' src='/img/hangzhou.jpg'></image>
       </swiper-item>
       <!-- </block> -->
     </swiper>
     <!-- 标签 -->
     <view class='index-font-label'>
       <span class='index-font' catchtap='onClickDetail'>上海</span>
-      <span class='index-font'>北京</span>
-      <span class='index-font'>成都</span>
-      <span class='index-font'>重庆</span>
-      <span class='index-font'>三亚</span>
-      <span class='index-font'>广州</span>
-      <span class='index-font'>杭州</span>
-      <span class='index-font'>苏州</span>
-      <span class='index-font'>武汉</span>
-      <span class='index-font index-all'>全部</span>
+      <span class='index-font' catchtap='onClickDetail'>北京</span>
+      <span class='index-font' catchtap='onClickDetail'>成都</span>
+      <span class='index-font' catchtap='onClickDetail'>重庆</span>
+      <span class='index-font' catchtap='onClickDetail'>三亚</span>
+      <span class='index-font' catchtap='onClickDetail'>广州</span>
+      <span class='index-font' catchtap='onClickDetail'>杭州</span>
+      <span class='index-font' catchtap='onClickDetail'>苏州</span>
+      <span class='index-font' catchtap='onClickDetail'>武汉</span>
+      <span class='index-font index-all' catchtap='onClickSearch'>全部</span>
     </view>
   </view>
   <!-- 秋日私语 -->
@@ -72,7 +72,7 @@
     <!-- 轮播 -->
     <swiper class='join-swipers' autoplay="{{false}}" next-margin='290rpx' duration="300">
       <!-- <block wx:for='{{Project}}' wx:key='{{index}}'> -->
-      <swiper-item>
+      <swiper-item catchtap='onClickDetail'>
         <image class='index-add-img' src='/img/beijing.png'></image>
         <view class='index-intor'>
           <span class='index-top1'>TOP1 皇城根下品京味儿</span>
@@ -80,7 +80,7 @@
           <span class='index-top3'>关键字 #故宫 #四合院</span>
         </view>
       </swiper-item>
-      <swiper-item>
+      <swiper-item catchtap='onClickDetail'>
         <image class='index-add-img' src='/img/chongqing.png'></image>
         <view class='index-intor'>
           <span class='index-top1'>TOP2 火辣的网红城市</span>
@@ -88,7 +88,7 @@
           <span class='index-top3'>关键字 #火锅 #洪崖洞</span>
         </view>
       </swiper-item>
-      <swiper-item>
+      <swiper-item catchtap='onClickDetail'> 
         <image class='index-add-img' src='/img/chengdu.png'></image>
         <view class='index-intor'>
           <span class='index-top1'>TOP3 宽窄巷子慢生活</span>
@@ -96,7 +96,7 @@
           <span class='index-top3'>关键字 #锦里 #串串儿</span>
         </view>
       </swiper-item>
-      <swiper-item>
+      <swiper-item catchtap='onClickDetail'>
         <image class='index-add-img' src='/img/shanghai.jpg'></image>
         <view class='index-intor'>
           <span class='index-top1'>TOP4 繁华魔都超体验</span>
@@ -116,28 +116,28 @@
     <!-- 轮播 -->
     <swiper class='join-swipers' autoplay="{{false}}" next-margin='100rpx' duration="300">
       <!-- <block wx:for='{{Project}}' wx:key='{{index}}'> -->
-      <swiper-item class='index-width'>
+      <swiper-item class='index-width' catchtap='onClickDetail'>
         <image class='index-bigimg' src='/img/beijing.png'></image>
         <view class='index-smallimg'>
           <image class='index-add-img1' src='/img/beijing.png'></image>
           <image class='index-add-img2' src='/img/beijing.png'></image>
         </view>
       </swiper-item>
-      <swiper-item class='index-width'>
+      <swiper-item class='index-width' catchtap='onClickDetail'>
         <image class='index-bigimg' src='/img/beijing.png'></image>
         <view class='index-smallimg'>
           <image class='index-add-img1' src='/img/beijing.png'></image>
           <image class='index-add-img2' src='/img/beijing.png'></image>
         </view>
       </swiper-item>
-      <swiper-item class='index-width'>
+      <swiper-item class='index-width' catchtap='onClickDetail'>
         <image class='index-bigimg' src='/img/beijing.png'></image>
         <view class='index-smallimg'>
           <image class='index-add-img1' src='/img/beijing.png'></image>
           <image class='index-add-img2' src='/img/beijing.png'></image>
         </view>
       </swiper-item>
-      <swiper-item class='index-width'>
+      <swiper-item class='index-width' catchtap='onClickDetail'>
         <image class='index-bigimg' src='/img/beijing.png'></image>
         <view class='index-smallimg'>
           <image class='index-add-img1' src='/img/beijing.png'></image>
@@ -180,10 +180,11 @@
     <!-- 轮播 -->
     <swiper class='join-swiper exjoin-swipers' autoplay="{{false}}" next-margin='510rpx' duration="100">
       <!-- <block wx:for='{{Project}}' wx:key='{{index}}'> -->
-      <swiper-item class='label-box'>
-        <view class='index-add-label active-label'># 北京</view>
+      <swiper-item class='label-box' wx:for='{{cityData}}' wx:key='{{index}}' data-id ='{{item.cityId}}' catchtap='cityIsCheck'>
+        <view class='index-add-label active-label' wx:if='{{item.isCheck==true}}'>{{item.cityName}}</view>
+        <view class='index-add-label' wx:else>{{item.cityName}}</view>
       </swiper-item>
-      <swiper-item class='label-box'>
+      <!-- <swiper-item class='label-box'>
         <view class='index-add-label'># 上海</view>
       </swiper-item>
       <swiper-item class='label-box'>
@@ -203,12 +204,12 @@
       </swiper-item>
       <swiper-item class='label-box'>
         <view class='index-add-label'># 深圳</view>
-      </swiper-item>
+      </swiper-item> -->
       <!-- </block> -->
     </swiper>
      <!-- 特价房源轮播 -->
       <swiper class='join-swipers ex-swipers' autoplay="{{false}}" next-margin='290rpx' duration="300">
-        <swiper-item>
+        <swiper-item catchtap='onPrice'>
           <image class='index-add-img' src='/img/beijing.png'></image>
           <view class='index-intor'>
             <span class='index-top1'>TOP1 皇城根下品京味儿</span>
@@ -216,7 +217,7 @@
             <span class='index-top3 fr'>宜住2人</span>
           </view>
         </swiper-item>
-        <swiper-item>
+        <swiper-item catchtap='onPrice'>
           <image class='index-add-img' src='/img/chongqing.png'></image>
           <view class='index-intor'>
             <span class='index-top1'>TOP2 火辣的网红城市</span>
@@ -224,7 +225,7 @@
             <span class='index-top3 fr'>宜住2人</span>
           </view>
         </swiper-item>
-        <swiper-item>
+        <swiper-item catchtap='onPrice'>
           <image class='index-add-img' src='/img/chengdu.png'></image>
           <view class='index-intor'>
             <span class='index-top1'>TOP3 宽窄巷子慢生活</span>
@@ -232,7 +233,7 @@
             <span class='index-top3 fr'>宜住2人</span>
           </view>
         </swiper-item>
-        <swiper-item>
+        <swiper-item catchtap='onPrice'>
           <image class='index-add-img' src='/img/shanghai.jpg'></image>
           <view class='index-intor'>
             <span class='index-top1'>TOP4 繁华魔都超体验</span>

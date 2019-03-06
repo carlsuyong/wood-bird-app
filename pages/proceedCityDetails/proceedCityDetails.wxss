@@ -1,3 +1,6 @@
+.container{
+  margin-bottom: 100rpx;
+}
 swiper-item{
   width: 100%;
 }
@@ -52,4 +55,121 @@ swiper-item>image{
   color: #ff9180;
   border-radius: 10rpx;
   margin-top: 20rpx;
+}
+
+
+.housemessage{
+  background-color: rgba(240, 240, 240,0.5);
+  padding: 30rpx;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+}
+.houses{
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+
+.houseImg image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 15rpx;
+}
+
+.houseImg{
+  float: left;
+  margin-left: 60rpx;
+}
+
+.houseText{
+  float: left;
+  margin-left: 50rpx;
+}
+.houseText1{
+  font-size: 32rpx;
+  display: block;
+}
+.houseText2{
+  display: block;
+  font-size: 28rpx;
+}
+.houseText2>text{
+  margin-right: 10rpx;
+}
+/* 房屋描述 */
+.houseDetail{
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.houseTitle{
+  color: rgb(91, 95, 96);
+  /* display: block; */
+}
+.houseTitles{
+  color: rgb(91, 95, 96);
+}
+.houseDetails{
+  display: block;
+  font-size: 28rpx;
+  color: rgba(91, 95, 96,0.8);
+}
+
+.houseTitleFloat{
+  float: right;
+  color: #ff9180;
+}
+
+.houseWifi{
+  overflow: hidden;
+  padding-top:30rpx; 
+}
+.houseWifi>text{
+  font-size: 28rpx;
+  display: block;
+  width: 50%;
+  float: left;
+  text-align: center;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+/* 入住须知 */
+.houseKnows{
+  overflow: hidden;
+  background-color: rgba(91, 95, 96,0.8);
+  width: 100%;
+  margin-top: 20rpx;
+  padding: 15rpx 0;
+}
+.houseKnow{
+  float: left;
+  width: 33.3%;
+}
+.houseKnow>text{
+  display: block;
+  text-align: center;
+color: white;
+font-size: 28rpx;
+}
+
+.knowGle{
+  overflow: hidden;
+  margin: 15rpx 0;
+}
+.knowText1{
+  font-size: 28rpx;
+  float: left;
+}
+.knowText2{
+  font-size: 28rpx;
+  float: right;
+}
+/*预定 */
+.yuding{
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #ff9180;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  text-align: center;
+  color: white;
 }

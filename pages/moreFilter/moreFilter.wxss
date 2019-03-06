@@ -1,0 +1,72 @@
+.pricefilter {
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.sliderHCon {
+  height: 200rpx;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.MoneyValue {
+  font-size: 30rpx;
+  text-align: center;
+  color: #999;
+  margin-top: 15rpx;
+}
+
+.showMoney text {
+  margin-right: 30rpx;
+}
+
+.twoSlider {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.price {
+  font-size: 22rpx;
+  color: #bbb;
+}
+
+.tabs {
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+
+.check {
+  float: left;
+}
+
+.select {
+  float: right;
+  font-size: 24rpx;
+  color: #bbb;
+}
+
+.label-1 {
+  margin-top: 20rpx;
+  float: left;
+  width: 25%;
+  transform: scale(0.7);
+}
+.over{
+  overflow: hidden;
+}
+.btn{
+  width: 100%;
+  height: 80rpx;
+  background-color: #ff9180;
+  text-align: center;
+  line-height: 80rpx;
+  color: white;
+  margin-top: 100rpx;
+}

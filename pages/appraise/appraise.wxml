@@ -1,0 +1,32 @@
+<view class='container'>
+  <!-- 头像 -->
+  <view class='leftTitle'>
+    <image src='/img/beijing.png'></image>
+    <!-- 评价 -->
+    <view class='downTitle'>
+      <text class='name'>mustang</text>
+      <text class='custom'>房间很舒服楼层很高</text>    
+      <text class='landlord'>房东回复: 感谢您的评价</text>  
+    </view>
+  </view>
+
+  <view class='leftTitle'>
+    <image src='/img/beijing.png'></image>
+    <!-- 评价 -->
+    <view class='downTitle'>
+      <text class='name'>橘子</text>
+      <text class='custom'>房间很舒服楼层很高</text>    
+      <text class='landlord'>房东回复: 感谢您的评价</text>  
+    </view>
+  </view>
+
+  <view class='leftTitle'>
+    <image src='/img/beijing.png'></image>
+    <!-- 评价 -->
+    <view class='downTitle'>
+      <text class='name'>苹果</text>
+      <text class='custom'>房间很舒服楼层很高</text>    
+      <text class='landlord'>房东回复: 感谢您的评价</text>  
+    </view>
+  </view>
+</view>

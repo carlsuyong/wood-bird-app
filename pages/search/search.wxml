@@ -3,7 +3,7 @@
   <view class='index-search' catchtap='onClickSearch'>
     <image class='search-img' src='/img/search.png'></image>
     <input placeholder='请输入目的地名称'></input>
-    <span catchtap='onCancleSearch' class='cancle'>取消</span>
+    <!-- <span catchtap='onCancleSearch' class='cancle'>取消</span> -->
   </view>
   <!-- 热门城市 -->
   <view class='hot-city'>

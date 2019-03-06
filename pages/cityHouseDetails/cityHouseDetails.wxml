@@ -1,13 +1,17 @@
 <view class='container'>
   <!-- 头部 -->
   <view class='header'>
-    <view class='headerTab' catchtap='ontabBeginDate'>
+    <view class='headerTab' bindtap="pickerShow">
       <text class='headerselect'>入住日期</text>
-      <text class='activeselect activeClick'>选择日期</text>
+      <text wx:if="{{startTime}}" class='activeselect activeClick'>{{start}}至{{end}}</text>
+      <text wx:else class='activeselect activeClick'>选择日期</text>
+
     </view>
-    <view class='headerTab' catchtap='ontabBeginDate'>
-      <text class='headerselect'>推荐排序</text>
-      <text class='activeselect activeClick'>默认排序</text>
+    <view class='headerTab'>
+      <picker class='tabs' bindchange="bindChange" value="{{index}}" range="{{orderArray}}">
+        <text class='headerselect'>推荐排序</text>
+        <text class='activeselect activeClick'>{{orderList}}</text>
+      </picker>
     </view>
     <view class='headerTab' catchtap='ontabBeginDate'>
       <text class='headerselect'>更多筛选</text>
@@ -17,45 +21,21 @@
   <view class='empty'></view>
   <!-- 内容 -->
   <view class='cityhouse'>
-    <view class='index-container' catchtap='onclickprice'>
-      <image class='bg-img' src='/img/searchbg.jpg'></image>
-      <view class='line-price'>
-          <text class='price'>￥499</text>
+    <block wx:for='{{allHouseData}}' wx:key='index'>
+      <view class='index-container' data-id='{{item.houseId}}' catchtap='onclickprice'>
+        <image class='bg-img' src='/img/searchbg.jpg'></image>
+        <view class='line-price'>
+          <text class='price'>￥{{item.price}}</text>
           <image class='lineimg' src='/img/beijing.png'></image>
+        </view>
+        <view class='task-title'>
+          <text class='forcetitle'>{{item.name}}</text>
+          <text class='force'>5.0</text>
+        </view>
+        <view class='city-adress'>{{item.addrDetail}}</view>
       </view>
-      <view class='task-title'>
-        <text class='forcetitle'>武汉版中国合伙人打造温馨小窝</text>
-        <text class='force'>5.0</text>
-      </view>  
-      <view class='city-adress'>北京市朝阳区</view>
-    </view>
-
-    <view class='index-container'>
-      <image class='bg-img' src='/img/searchbg.jpg'></image>
-      <view class='line-price'>
-          <text class='price'>￥499</text>
-          <image class='lineimg' src='/img/beijing.png'></image>
-      </view>
-      <view class='task-title'>
-        <text class='forcetitle'>武汉版中国合伙人打造温馨小窝</text>
-        <text class='force'>5.0</text>
-      </view>  
-      <view class='city-adress'>北京市朝阳区</view>
-    </view>
-
-    <view class='index-container'>
-      <image class='bg-img' src='/img/searchbg.jpg'></image>
-      <view class='line-price'>
-          <text class='price'>￥499</text>
-          <image class='lineimg' src='/img/beijing.png'></image>
-      </view>
-      <view class='task-title'>
-        <text class='forcetitle'>武汉版中国合伙人打造温馨小窝</text>
-        <text class='force'>5.0</text>
-      </view>  
-      <view class='city-adress'>北京市朝阳区</view>
-    </view>
-
+    </block>
   </view>
-  
+
 </view>
+<timePicker pickerShow="{{isPickerShow}}" id="picker" bind:hidePicker="pickerHide" bind:setPickerTime="setPickerTime" config="{{pickerConfig}}"></timePicker>

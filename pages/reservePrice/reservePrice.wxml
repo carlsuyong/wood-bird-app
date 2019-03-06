@@ -1,0 +1,44 @@
+<view class='container'>
+  <view class='bgTitle'>
+    <text>    
+      六号线铜锣湾巷子
+    </text>
+  </view>
+  <!-- 日期 -->
+  <view class='bgDate'>
+    <view class='beginTime'>
+      <text>2018-01-08</text> 
+      <text>入住日期</text> 
+    </view>
+    <text class='timeLine'>\</text>
+    <view class='endTime'>
+      <text>2018-01-08</text> 
+      <text>离开日期</text> 
+    </view>
+  </view>
+  <!-- 套数 -->
+  <view class='taoNumber'>
+    <text class='numName'>套数</text>
+    <view>
+      <text class='name1'>1套</text>
+      <text class='name2'>标准入住人数2人</text>
+    </view>
+  </view>
+  <!-- 套数 -->
+  <view class='taoNumber'>
+    <text class='numName'>房客信息</text>
+    <view class='names'>
+      <text class='names1'>姓名</text>
+      <input class='names2' placeholder='请输入姓名'></input>
+    </view>
+    <view class='names'>
+      <text class='names1'>手机号</text>
+      <text class='names2'>18621390339</text>
+    </view>
+  </view>
+  <!-- 预定 -->
+  <view class='yuding'>
+      <text class='money'>实付款: 369.00元</text>
+      <text class='accea' class='accea' catchtap='onyuding'>立即预定</text>  
+  </view>
+</view>

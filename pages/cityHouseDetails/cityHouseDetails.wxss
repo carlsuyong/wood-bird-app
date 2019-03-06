@@ -116,3 +116,8 @@
   float: right;
   margin-right: 15rpx;
 }
+.tabs text{
+  display: block;
+  text-align: center;
+  color: #666;
+}
